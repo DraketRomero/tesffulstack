@@ -8,10 +8,6 @@ Antes de comenzar, asegúrate de tener instalados los siguientes programas:
 
 - Git
 
-- Java JDK 17+
-
-- Maven
-
 - MySQL Server
 
 - MySQL Workbench (opcional)
