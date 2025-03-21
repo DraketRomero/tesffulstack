@@ -8,13 +8,13 @@ Antes de comenzar, asegúrate de tener instalados los siguientes programas:
 
 - Git
 
-- Java JDK 17+
+- Angular CLI
 
-- Maven
+- Navegador Chrome
 
-- MySQL Server
+- Visual Studio Code (opcional)
 
-- MySQL Workbench (opcional)
+- NodeJS
 
 
 ## Pasos para clonar el repositorio
@@ -33,29 +33,24 @@ git clone https://github.com/DraketRomero/tesffulstack.git
 cd tesffulstack
 ```
 
-## Configuración de la base de datos
-
-- Inicia sesión en MySQL desde la terminal o usa MySQL Workbench.
-
-- Carga el script schema.sql proporcionado en el repositorio:
-
-- Usa la base de datos creada:
+- Navega a la rama donde se encuentra la aplicacion angular
 
 ```
-USE bd_garrido;
+git checkout garrido_frontend
 ```
 
-- Crea un nuevo usuario en MySQL y otórgale permisos de administrador:
+- Abre una terminal y ejecuta el comando:
 
 ```
-CREATE USER 'conexion'@'localhost' IDENTIFIED BY '2Y;9~HK=uyLH@r`6h7\BkRHu!+iRi/';
-
-GRANT ALL PRIVILEGES ON bd_garrido.* TO 'conexion'@'localhost';
-
-FLUSH PRIVILEGES;
+npm install
 ```
 
-- Una vez ejecutado el archivo, podemos salir.
+- Esto descargara las dependencias necesarias para ejecutar el proyecto.
+
+- Despues, para inicializar la aplicacion, ejecuta el comando:
+
 ```
-exit;
+ng serve
 ```
+
+- Abrira el navegador en la URL http://localhost:4200/
