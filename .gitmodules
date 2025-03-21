@@ -1,0 +1,3 @@
+[submodule "garrido_frontend"]
+	path = garrido_frontend
+	url = https://github.com/DraketRomero/garrido_frontend.git
