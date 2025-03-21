@@ -8,13 +8,15 @@ Antes de comenzar, asegúrate de tener instalados los siguientes programas:
 
 - Git
 
-- Angular CLI
+- Java JDK 17+
 
-- Navegador Chrome
+- Maven
 
 - Visual Studio Code (opcional)
 
-- NodeJS
+- MySQL Server
+
+- MySQL Workbench (opcional)
 
 
 ## Pasos para clonar el repositorio
@@ -33,24 +35,37 @@ git clone https://github.com/DraketRomero/tesffulstack.git
 cd tesffulstack
 ```
 
-- Navega a la rama donde se encuentra la aplicacion angular
+- Navega a la rama donde se encuentra la aplicacion spring boot
 
 ```
-git checkout garrido_frontend
+git checkout garrido_backend
 ```
 
-- Abre una terminal y ejecuta el comando:
+
+## Configuración del proyecto
+
+- Renombra el archivo application-example.properties a application.properties.
+
+- Modifica el archivo application.properties con las credenciales de la base de datos, creada en el punto anterior:
+
+
+spring.datasource.url=jdbc:mysql://localhost:3306/garrido_db
+spring.datasource.username=root
+spring.datasource.password=
+
+
+- Ejecutar la aplicación
+
+- Compila el proyecto con Maven:
 
 ```
-npm install
+mvn clean package
 ```
 
-- Esto descargara las dependencias necesarias para ejecutar el proyecto.
-
-- Despues, para inicializar la aplicacion, ejecuta el comando:
+- Ejecuta la aplicación:
 
 ```
-ng serve
+mvn spring-boot:run
 ```
 
-- Abrira el navegador en la URL http://localhost:4200/
+Despues de esto, la aplicación se estará esjecutanoo en http://localhost:8080.
